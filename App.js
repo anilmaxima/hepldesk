@@ -60,7 +60,9 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         {!role ? (
-          <Stack.Screen name="Login">
+          <Stack.Screen name="Login"
+            options={{ title: "Helpdesk" }} //  custom header title
+          >
             {(props) => <LoginScreen {...props} setRole={setRole} />}
           </Stack.Screen>
         ) : role === 'user' ? (
